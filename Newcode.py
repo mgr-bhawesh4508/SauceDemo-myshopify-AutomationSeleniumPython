@@ -45,6 +45,10 @@ def take_screenshot(driver, name):
 def driver():
     chrome_options = Options()
     chrome_options.add_argument("--start-maximized")
+    #for headless and jenkins
+    chrome_options.add_argument("--headless=new")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
     # Update this path to your actual chromedriver location
     service = Service(r"C:\Users\97155\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe")
 
